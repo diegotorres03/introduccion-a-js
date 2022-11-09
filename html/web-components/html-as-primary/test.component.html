@@ -1,0 +1,28 @@
+<div>
+    <input onchange="inputChanged" onkeypress="typeahead">
+    <b onclick="clickOnB" ondblclick="dobleclicked">Hello ({user})! ({counter}) times clicked by ({user}).</b>
+    <button onclick="clicked">click me</button>
+    <h1>({counter})</h1>
+    <hr>
+    <ol id="item-list">
+        <template data-loop="items" data-target="#item-list">
+            <li>({items[*].name})<button data-onclick="addToCart" data-param="items[*].name">+</button></li>
+        </template>
+        <li data-handler="selectItem" data-value="item 1" data-handler-enabled="true" >item 1</li>
+        <li data-handler="selectItem" data-value="item 2" data-handler-enabled="true" >item 2</li>
+        <li data-handler="selectItem" data-value="item 3" data-handler-enabled="true" >item 3</li>
+        <li data-handler="selectItem" data-value="item 4" data-handler-enabled="true" >item 4</li>
+        <li data-handler="selectItem" data-value="item 5" data-handler-enabled="true" >item 5</li>
+        <li data-handler="selectItem" data-value="item 6" data-handler-enabled="true" >item 6</li>
+        <li data-handler="selectItem" data-value="item 7" data-handler-enabled="true" >item 7</li>
+    </ol>
+
+    <hr>
+    <h3>this is an object</h3>
+    <ul>
+        <li data-key="key1" data-value="value1" ><b>key1:</b> ({object.key1})</li>
+        <li data-key="key1" data-value="value1" ><b>key1:</b> ({object.key1})</li>
+        <li data-key="key1" data-value="value1" ><b>key1:</b> ({object.key1})</li>
+    </ul>
+
+</div>

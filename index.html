@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>h1</h1>
+    <!-- <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <h7>h7</h7> -->
+
+    <p>Lorem <b>ipsum dolor sit amet</b> consectetur, adipisicing elit. Veniam vitae cum corporis odit dicta numquam sit veritatis, beatae eaque tenetur placeat quidem aut a temporibus fuga minus adipisci nemo perferendis!</p>
+
+    <ol>
+        <li><a href="otro.html#articulo2">Super articulo que cambio mi vida</a></li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ol>
+
+    <hr>
+
+    <ul id="super-lista">
+        <li>item 1 <button class="remove-item-btn" >X</button></li>
+        <li>item 2 <button class="remove-item-btn" >X</button></li>
+        <li>item 3 <button class="remove-item-btn" >X</button></li>
+        <li>item 4 <button class="remove-item-btn" >X</button></li>
+        <li>item 5 <button class="remove-item-btn" >X</button></li>
+    </ul>
+
+    <br>
+    <!-- I <3 u MOE -->
+    <input type="text" placeholder="(>*.*)>" id="aguacatico-input">
+    <button id="add-btn" > add item </button>
+
+    <script>
+        const log = console.log
+
+        log('asdasdasdkjhasdk')
+        const addBtn = document.getElementById('add-btn')
+        const input = document.getElementById('aguacatico-input')
+        const lista = document.getElementById('super-lista')
+        const removeBtns = document.getElementsByClassName('remove-item-btn')
+
+        log(removeBtns)
+        Array.from(removeBtns).forEach(function(removeBtn){
+            removeBtn.addEventListener('click', function(event){
+                log(event)
+            })
+        })
+
+
+        input.addEventListener('keyup', function(event){
+            if(event.key === 'Enter') {
+                createLIAndAddValue()
+            }
+        })
+
+        addBtn.addEventListener('click', addItem)
+
+        function addItem(event) {
+            createLIAndAddValue()
+        }
+        
+        function createLIAndAddValue() {
+            const listItem = document.createElement('li')
+            listItem.textContent = input.value
+            lista.appendChild(listItem)
+            input.value = ''
+        }
+
+    </script>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>asdasd</th>
+            <th>asdasd</th>
+            <th>asdasd</th>
+            <th>asdasd</th>
+        </tr>
+        <tr>
+            <td>asdasd</td>
+            <td>asdasd</td>
+            <td>asdasd</td>
+            <td>asdasd</td>
+        </tr>
+    </table>
+
+
+    <form action="">
+        <label for="name-input">Name:</label>
+        <input type="text" name="" id="name-input">
+        <br>
+        <label for="email-input">email:</label>
+        <input type="email" name="" id="email-input">
+        <br>
+        <input type="range" name="" id="">
+        <br>
+        <input type="date" name="" id="">
+
+    </form>
+
+</body>
+</html>

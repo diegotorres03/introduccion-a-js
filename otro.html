@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <nav>
+        <a href="#articulo1"> articulo1</a>
+        <br>
+        <a href="#articulo2"> articulo2</a>
+    </nav>
+
+    <hr>
+
+    <script>
+        const html = function (templates, ...values) {
+            const template = document.createElement('template')
+            let str = ''
+            templates.forEach((template, index) => {
+                str += template
+                str = values[index] ? str + values[index] : str
+            })
+            template.innerHTML = str.trim()
+            return template.content
+        }
+        
+        class SuperArticle extends HTMLElement {
+        
+            constructor() {
+                super()
+            }
+        
+            _render() {
+                const inner = html`<b>Hello There!</b>`
+                this.innerHTML = ''
+                this.appendChild(inner)
+            }
+        
+            connectedCallback() { this._render() }
+        
+            disconnectedCallback() { }
+        
+            attributeChangedCallback(name, oldValue, newValue) { }
+        
+            adoptedCallback() { }
+        
+        }
+        
+        window.customElements.define('super-article', SuperArticle)
+        
+    </script>
+
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+    <super-article></super-article>
+
+    <article id="articulo1">
+        <img src="html/84.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+    </article>
+        
+    <hr>
+        
+    <article id="articulo2">
+        <img src="html/84.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse aperiam, cum amet consequatur quisquam iusto aspernatur ad neque eveniet hic reiciendis iure optio deleniti deserunt necessitatibus sit pariatur. Sunt!</p>
+    </article>
+        
+        
+
+</body>
+</html>

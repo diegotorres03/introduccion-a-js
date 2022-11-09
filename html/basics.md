@@ -29,6 +29,18 @@ Esto se llama una etiqueta, las usamos para darle forma y funcionalidad a nuestr
 
 Veamos unos ejemplos de etiquetas
 
+### titulos o headers 
+hay 7 tags, de `h1` a `h7`. estos van a hacer titulos siendo h1 el mas grande y h7 el mas peque~o
+```html
+<h1>Super Titulo</h1>
+<h2>Super Titulo</h2>
+<h4>Super Titulo</h4>
+<h5>Super Titulo</h5>
+<h6>Super Titulo</h6>
+<h7>Super Titulo</h7>
+
+```
+
 ### Salto de linea
 ```html
 este es un salto de linea normal
@@ -62,6 +74,14 @@ este dibuja una rallita
 </ul>
 
 ```
+
+### Links entre documentos
+con la etiqueta `<a>` podemos referenciar otras partes en el mismo documento o apuntar a diferentes documentos, sean en el mismo servidor o en un servidor externo
+```html
+
+
+```
+
 
 ### Etiquetas semanticas
 Cuando queremos estructurar mejor nuestros documentos, podemos usar etiquetas semanticas para darle un poco mas de contexto a lo que estamos haciendo, por ejemplo:
